@@ -1,3 +1,9 @@
+if [ -z "$1" ]
+  then
+    echo 'Must enter a parameter <student-id-number>';
+    exit;
+fi
+
 SUBMISSION="$1"'.zip'
 HOME="$1"'/'
 
