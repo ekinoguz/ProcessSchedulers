@@ -98,5 +98,44 @@ public class Tester {
     }
 
     // Test PSScheduler
+    // Public test 1
+    try {
+      input = "tests/ps1.input";
+      output = "tests/ps1.output";
+      scheduler = new PSScheduler();
+      scheduler.schedule(input, output);
+    } catch (Exception e) {
+      // No exception should occur.
+    }
+    
+    // Public test 2
+    try {
+      input = "tests/ps2.input";
+      output = "tests/ps2.output";
+      scheduler = new PSScheduler();
+      scheduler.schedule(input, output);
+    } catch (Exception e) {
+      // No exception should occur.
+    }
+    
+    // Public test 3
+    try {
+      input = "tests/ps3.input";
+      output = "tests/ps3.output";
+      scheduler = new PSScheduler();
+      scheduler.schedule(input, output);
+    } catch (Exception e) {
+      // No exception should occur.
+    }
+
+    // Public test 4
+    try {
+      input = "tests/ps4.input";
+      output = "tests/ps4.output";
+      scheduler = new PSScheduler();
+      scheduler.schedule(input, output);
+    } catch (Exception e) {
+      // No exception should occur.
+    }
   }
 }

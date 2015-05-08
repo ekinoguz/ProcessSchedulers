@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ -z "$1" ]
   then
     echo 'Must enter a parameter <student-id-number>';
@@ -26,7 +28,9 @@ make clean;
 make;
 java Tester;
 
-declare -i grade=0;
+# Declare grade variables
+grade=0;
+bonus=0;
 
 # Add your test comparisons to below
 
@@ -115,4 +119,43 @@ else
   echo 'failing 5'
 fi
 
+# PS
+echo 'Testing PS...'
+if diff tests/ps1.output tests/ps1.expected > /dev/null; then
+  : # files are the same
+  echo 'passing 1'
+  bonus=$((bonus + 10))
+else
+  : # files are different
+  echo 'failing 1'
+fi
+
+if diff -q tests/ps2.output tests/ps2.expected > /dev/null; then
+  : # files are the same
+  echo 'passing 2'
+  bonus=$((bonus + 10))
+else
+  : # files are different
+  echo 'failing 2'
+fi
+
+if diff -q tests/ps3.output tests/ps3.expected > /dev/null; then
+  : # files are the same
+  echo 'passing 3'
+  bonus=$((bonus + 10))
+else
+  : # files are different
+  echo 'failing 3'
+fi
+
+if diff -q tests/ps4.output tests/ps4.expected > /dev/null; then
+  : # files are the same
+  echo 'passing 4'
+  bonus=$((bonus + 10))
+else
+  : # files are different
+  echo 'failing 4'
+fi
+
 echo 'Grade is:' $grade;
+echo 'Bonus grade is:' $bonus;
