@@ -157,5 +157,14 @@ else
   echo 'failing 4'
 fi
 
+if diff -q tests/ps5.output tests/ps5.expected > /dev/null; then
+  : # files are the same
+  echo 'passing 5'
+  bonus=$((bonus + 10))
+else
+  : # files are different
+  echo 'failing 5'
+fi
+
 echo 'Grade is:' $grade;
 echo 'Bonus grade is:' $bonus;

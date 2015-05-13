@@ -137,5 +137,15 @@ public class Tester {
     } catch (Exception e) {
       // No exception should occur.
     }
+
+    // Public test 5
+    try {
+      input = "tests/ps5.input";
+      output = "tests/ps5.output";
+      scheduler = new PSScheduler();
+      scheduler.schedule(input, output);
+    } catch (Exception e) {
+      // No exception should occur.
+    }
   }
 }
