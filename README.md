@@ -45,7 +45,7 @@ Each of your algorithms will need to read a file containing the simulation data 
 
 Input file is a text file that has all the necessary details of the schedulable processes. Each line will represent a unique process in the following format:
 
-```sh
+```
 <process-id> <arrival-time> <burst-time> <arrival-time> <share>
 ```
 * ```<process-id>```: Unique, unsigned long, 264-1 maximum, that represents a process.
@@ -58,7 +58,7 @@ A single whitespace character separates items in each line.
 ## Output File Format
 Output file will record the results of your simulation. Each line will representall necessary scheduler information for a unique process in the following format:
 
-```sh
+```
 <process-id> <finish-time> <wait-time> <turnaround-time>
 ```
 * ```<process-id>```: Unique id read from input file. File should be sorted in increasing order of <process-id>s.
@@ -70,11 +70,11 @@ Lines should be ordered from least to greatest process identifier.
 
 Last line of the output file should contain:
 
-```sh
+```
 <average-wait-time> <average-turnaround-time>
 ```
 
-where you average the wait-time and turnaround-time of all processes. Note that this value should be rounded using ```Math.round()``` function in Java.
+where you average the wait-time and turnaround-time of all processes. Note that this value should be rounded using `Math.round()` function in Java.
 
 A single whitespace character should separate items in each line.
 
