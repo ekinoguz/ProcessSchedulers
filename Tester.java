@@ -1,151 +1,88 @@
+
 public class Tester {
 
+  private final static long TIMEOUT = 2100000000; // in terms of nanotime.
+
+  /** Runs the given scheduler. Timeout the scheduler if thread takes longer than it should. */
+  private static void testScheduler(final Scheduler scheduler, final String inputFile,
+      final String outputFile) {
+    Thread thread = new Thread(new Runnable() {
+
+      @Override
+      public void run() {
+        try {
+          scheduler.schedule(inputFile, outputFile);
+        } catch (Exception e) {
+          System.out.println("Exception occurred:");
+          e.printStackTrace();
+        }
+      }
+    });
+
+    thread.start();
+    long endTime = System.nanoTime() + TIMEOUT;
+    while (thread.isAlive() && !thread.isInterrupted()) {
+      long currentTime = System.nanoTime();
+      if (currentTime > endTime) {
+        thread.interrupt();
+        System.out.println("Interrupted");
+      }
+
+      // Not to abuse busy-waiting.
+      try {
+        Thread.sleep(20);
+      } catch (InterruptedException e) {
+      }
+    }
+    System.out.println("Execution finished after " + (System.nanoTime() - endTime + TIMEOUT)/1000000000.0);
+  }
+
   public static void main(String[] args) {
-    String input;
-    String output;
     Scheduler scheduler;
 
     // Test FCFSScheduler
-    // Public test 1
-    try {
-      input = "tests/fcfs1.input";
-      output = "tests/fcfs1.output";
-      scheduler = new FCFSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new FCFSScheduler();
+    testScheduler(scheduler, "tests/fcfs1.input", "tests/fcfs1.output");
 
-    // Public test 2
-    try {
-      input = "tests/fcfs2.input";
-      output = "tests/fcfs2.output";
-      scheduler = new FCFSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new FCFSScheduler();
+    testScheduler(scheduler, "tests/fcfs2.input", "tests/fcfs2.output");
 
-    // Public test 3
-    try {
-      input = "tests/fcfs3.input";
-      output = "tests/fcfs3.output";
-      scheduler = new FCFSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new FCFSScheduler();
+    testScheduler(scheduler, "tests/fcfs3.input", "tests/fcfs3.output");
 
-    // Public test 4
-    try {
-      input = "tests/fcfs4.input";
-      output = "tests/fcfs4.output";
-      scheduler = new FCFSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new FCFSScheduler();
+    testScheduler(scheduler, "tests/fcfs4.input", "tests/fcfs4.output");
 
     // Test SRTFScheduler
-    // Public test 1
-    try {
-      input = "tests/srtf1.input";
-      output = "tests/srtf1.output";
-      scheduler = new SRTFScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-
-    // Public test 2
-    try {
-      input = "tests/srtf2.input";
-      output = "tests/srtf2.output";
-      scheduler = new SRTFScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-
-    // Public test 3
-    try {
-      input = "tests/srtf3.input";
-      output = "tests/srtf3.output";
-      scheduler = new SRTFScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-
-    // Public test 4
-    try {
-      input = "tests/srtf4.input";
-      output = "tests/srtf4.output";
-      scheduler = new SRTFScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-
-    // Public test 5
-    try {
-      input = "tests/srtf5.input";
-      output = "tests/srtf5.output";
-      scheduler = new SRTFScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new SRTFScheduler();
+    testScheduler(scheduler, "tests/srtf1.input", "tests/srtf1.output");
+    
+    scheduler = new SRTFScheduler();
+    testScheduler(scheduler, "tests/srtf2.input", "tests/srtf2.output");
+    
+    scheduler = new SRTFScheduler();
+    testScheduler(scheduler, "tests/srtf3.input", "tests/srtf3.output");
+    
+    scheduler = new SRTFScheduler();
+    testScheduler(scheduler, "tests/srtf4.input", "tests/srtf4.output");
+    
+    scheduler = new SRTFScheduler();
+    testScheduler(scheduler, "tests/srtf5.input", "tests/srtf5.output");
 
     // Test PSScheduler
-    // Public test 1
-    try {
-      input = "tests/ps1.input";
-      output = "tests/ps1.output";
-      scheduler = new PSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-    
-    // Public test 2
-    try {
-      input = "tests/ps2.input";
-      output = "tests/ps2.output";
-      scheduler = new PSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
-    
-    // Public test 3
-    try {
-      input = "tests/ps3.input";
-      output = "tests/ps3.output";
-      scheduler = new PSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new PSScheduler();
+    testScheduler(scheduler, "tests/ps1.input", "tests/ps1.output");
 
-    // Public test 4
-    try {
-      input = "tests/ps4.input";
-      output = "tests/ps4.output";
-      scheduler = new PSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new PSScheduler();
+    testScheduler(scheduler, "tests/ps2.input", "tests/ps2.output");
 
-    // Public test 5
-    try {
-      input = "tests/ps5.input";
-      output = "tests/ps5.output";
-      scheduler = new PSScheduler();
-      scheduler.schedule(input, output);
-    } catch (Exception e) {
-      // No exception should occur.
-    }
+    scheduler = new PSScheduler();
+    testScheduler(scheduler, "tests/ps3.input", "tests/ps3.output");
+
+    scheduler = new PSScheduler();
+    testScheduler(scheduler, "tests/ps4.input", "tests/ps4.output");
+
+    scheduler = new PSScheduler();
+    testScheduler(scheduler, "tests/ps5.input", "tests/ps5.output");
   }
 }
