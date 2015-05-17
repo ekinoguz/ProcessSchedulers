@@ -51,7 +51,7 @@ Input file is a text file that has all the necessary details of the schedulable 
 ```
 <process-id> <arrival-time> <burst-time> <arrival-time> <share>
 ```
-* ```<process-id>```: Unique, unsigned long, 264-1 maximum, that represents a process.
+* ```<process-id>```: Unique, unsigned long, 2^64-1 maximum, that represents a process.
 * ```<arrival-time>```: Time when a process arrives, an unsigned integer.
 * ```<burst-time>```: CPU execution time, an integer number (0, 100]. This is the total time the process would spend running on CPU.
 * ```<share>```: An integer number (0, 100]. This will only be present in input files for the PS scheduler.
