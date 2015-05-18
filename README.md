@@ -49,7 +49,7 @@ Each of your algorithms will need to read a file containing the simulation data 
 Input file is a text file that has all the necessary details of the schedulable processes. Each line will represent a unique process in the following format:
 
 ```
-<process-id> <arrival-time> <burst-time> <arrival-time> <share>
+<process-id> <arrival-time> <burst-time> <share>
 ```
 * ```<process-id>```: Unique, unsigned long, 2^64-1 maximum, that represents a process.
 * ```<arrival-time>```: Time when a process arrives, an unsigned integer.
