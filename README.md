@@ -51,7 +51,7 @@ Input file is a text file that has all the necessary details of the schedulable 
 ```
 <process-id> <arrival-time> <burst-time> <share>
 ```
-* ```<process-id>```: Unique, unsigned long, 2^64-1 maximum, that represents a process.
+* ```<process-id>```: Unique, unsigned long, 2^63-1 maximum, that represents a process.
 * ```<arrival-time>```: Time when a process arrives, an unsigned integer.
 * ```<burst-time>```: CPU execution time, an integer number (0, 100]. This is the total time the process would spend running on CPU.
 * ```<share>```: An integer number (0, 100]. This will only be present in input files for the PS scheduler.
@@ -59,7 +59,7 @@ Input file is a text file that has all the necessary details of the schedulable 
 A single whitespace character separates items in each line.
 
 ## Output File Format
-Output file will record the results of your simulation. Each line will representall necessary scheduler information for a unique process in the following format:
+Output file will record the results of your simulation. Each line will represent all necessary scheduler information for a unique process in the following format:
 
 ```
 <process-id> <finish-time> <wait-time> <turnaround-time>
