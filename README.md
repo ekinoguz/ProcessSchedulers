@@ -116,7 +116,7 @@ Before you submit your code package, make sure the grade.sh script runs without 
 In addition to your source code, you need to write an up to **one page report** about your project. Report will worth 20 points (plus 5 bonus points for the PS scheduler). Please discuss how you implemented the three algorithms and comment about run time efficiency of your implementation. Please attach your report to your zip file and name your report as <your-uci-student-id-number>.pdf format, e.g. 4521254.pdf.
 
 ## Grading
-We will be doing Black box testing in a virtual machine. Our grading will be performed with the script grade.sh on a Linux machine. Please note that it is your responsibility to make sure that your code compiles and runs in Linux, otherwise you might unnecessarily complicate the process and lose points.
+We will be doing Black box testing in a virtual machine. Our grading will be performed with the script grade.sh on a Linux machine. Please note that it is your responsibility to make sure that your code compiles and runs in Linux using the below exact same 6 instructions. Otherwise you might unnecessarily complicate the process and lose points.
 
 To be absolutely sure that your code will compile and run the public tests without any problems, follow the below instructions (which is exactly what we will do when grading your code):
 
