@@ -120,7 +120,7 @@ We will be doing Black box testing in a virtual machine. Our grading will be per
 
 To be absolutely sure that your code will compile and run the public tests without any problems, follow the below instructions (which is exactly what we will do when grading your code):
 
-1. Download and install [VirtualBox 4.3.26](http://download.virtualbox.org/virtualbox/4.3.26/virtualbox-4.3_4.3.26-98988~Ubuntu~precise_amd64.deb) for Linux.
+1. Download and install [VirtualBox 4.3.26](http://download.virtualbox.org/virtualbox/4.3.26/virtualbox-4.3_4.3.26-98988~Ubuntu~precise_amd64.deb) for Linux. If you do not have a Linux machine, find the version of VirtualBox 4.3.26 for your OS [here](http://dlc-cdn.sun.com/virtualbox/4.3.26/).
 
 2. Download and install [Ubuntu 12.04.5 LTS](http://releases.ubuntu.com/12.04/ubuntu-12.04.5-desktop-amd64.iso) inside VirtualBox. If you have resolution problems, follow the instructions [here](http://askubuntu.com/questions/73589/higher-screen-resolution-for-virtualbox).
 
