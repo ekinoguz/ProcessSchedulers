@@ -39,7 +39,7 @@ Please refer to the CPU Scheduling chapter in the course book on the definition 
 *   Break any ties by scheduling the process with the lowest process ID first. For example:
   *   In FCFS, PID 12 and PID 13 might arrive at the same time. Schedule PID 12 first.
   *   In SRTF, PID 3 and PID 14 might have the same remaining time. Schedule PID 3 first.
-  *   In PS, if PID 3 with share 60 and PID4 with share 10 are in ready queue at the same time, then PID 3 must be scheduled first. Please take a look at `ps5.input` and `ps5.expected` for a complete example.
+  *   In PS, if PID 3 with share 60 and PID4 with share 10 are in ready queue at the same time, then PID 3 must be scheduled first. Please take a look at `ps1.input` and `ps1.expected` for a complete example.
 *   For simplicity, neglect context switch time. That is, if a process arrives at time t, it can be scheduled and run right away at time t.
 
 Each of your algorithms will need to read a file containing the simulation data and need to write an output file, which includes the simulation results. The format of these files is explained next.
