@@ -97,21 +97,19 @@ You can find all the source code in https://github.com/ekinoguz/ProcessScheduler
 
 ## Submission
 
-After you are done, you should submit all your source code in a single ```.zip``` file via EEE Dropbox. The .zip file should contain the following files:
+After you are done, you should submit all your source code in a single ```.zip``` file via EEE Dropbox. Please name your zip file as ```<your-uci-student-id-number>.zip```, e.g. if your UCI student id number is 4521254, then your submission file should be 4521254.zip. The .zip file should contain the following files:
 
-1. Please name your zip file as ```<your-uci-student-id-number>.zip```, e.g. if your UCI student id number is 4521254, then your submission file should be 4521254.zip
+1. ```Makefile```: please make sure that you edit this file to accommodate changes you made to project. You are responsible to make sure your code compiles and runs.
 
-2. ```Makefile```: please make sure that you edit this file to accommodate changes you made to project. You are responsible to make sure your code compiles and runs.
+2. All the source code you wrote, including ```Scheduler.java```, ```FCFSScheduler.java```, ```SRTFScheduler.java```, and ```PSScheduler.java```.
 
-3. All the source code you wrote, including ```Scheduler.java```, ```FCFSScheduler.java```, ```SRTFScheduler.java```, and ```PSScheduler.java```.
+3. An additional file named ```code.java``` that includes all your (duplicated, copied) source code. We will use this file in our plagiarism detector tool. So simply copy your code from all your source files and paste it into “code.java”. Order is not important.
 
-4. An additional file named ```code.java``` that includes all your (duplicated, copied) source code. We will use this file in our plagiarism detector tool. So simply copy your code from all your source files and paste it into “code.java”. Order is not important.
+4. Do **NOT** include ```Tester.java``` and ```grade.sh```.
 
-5. Do **NOT** include ```Tester.java``` and ```grade.sh```.
+5. Do **NOT** include ```tests/``` folder and none of your own tests. We will be using our own private tests to grade your project.
 
-6. Do **NOT** include ```tests/``` folder and none of your own tests. We will be using our own private tests to grade your project.
-
-Before you submit your code package, make sure the grade.sh script runs without a problem for your zipped submission.
+Before you submit your code package, make sure the grade.sh script runs without a problem for your zipped submission. This part is further explained in next section, Grading.
 
 In addition to your source code, you need to write an up to **one page-single spaced report** about your project. Report will worth 20 points (plus 5 bonus points for the PS scheduler). Please discuss how you implemented the three algorithms and comment about run time efficiency of your implementation. Please attach your report to your zip file and name your report as <your-uci-student-id-number>.pdf format, e.g. 4521254.pdf.
 
@@ -131,9 +129,11 @@ To be absolutely sure that your code will compile and run the public tests witho
 
 4. Check your javac version by typing ```javac -version```. You should see ```javac 1.7.0_79```.
 
-5. Open up a terminal, go to directory where 4521254.zip is and type
+5. Create your submission package as described in section [Submission](https://github.com/ekinoguz/ProcessSchedulers/blob/master/README.md#submission)
+
+6. Open up a terminal, go to the directory where 4521254.zip, Tester.java and tests/ exists all together. Then type
   ```sh
   $ sh grade.sh 4521254
   ```
 
-6. You should see ```Grade is: X``` where X is some number between 0 and 90.
+7. You should see ```Grade is: X``` where X is some number between 0 and 90.
