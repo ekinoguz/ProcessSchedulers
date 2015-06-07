@@ -64,7 +64,7 @@ Output file will record the results of your simulation. Each line will represent
 ```
 <process-id> <finish-time> <wait-time> <turnaround-time>
 ```
-* ```<process-id>```: Unique id read from input file. File should be sorted in increasing order of <process-id>s.
+* ```<process-id>```: Unique id read from input file. File should be sorted in increasing order of ```<process-id>```s.
 * ```<finish-time>```: The time when the process finishes.
 * ```<wait-time>```: The total amount of time the process spends waiting in the ready queue.
 * ```<turnaround-time>```: The period from when the process enters the system to when the process completes execution.
