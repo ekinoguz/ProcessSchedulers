@@ -396,7 +396,7 @@ if [ $psPrivateCount -eq 6 ]; then
 fi
 
 # Print the grades
-fcfsResult='FCFS:[public='$fcfsPublicCount'/'$fcfsPublic', private='$fcfsPublicCount'/'$fcfsPrivate']'
+fcfsResult='FCFS:[public='$fcfsPublicCount'/'$fcfsPublic', private='$fcfsPrivateCount'/'$fcfsPrivate']'
 srtfResult='SRTF:[public='$srtfPublicCount'/'$srtfPublic', private='$srtfPrivateCount'/'$srtfPrivate']'
 psResult='PS:[public='$psPublicCount'/'$psPublic', private='$psPrivateCount'/'$psPrivate']'
 
