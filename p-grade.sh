@@ -27,7 +27,7 @@ cp -r p-tests $HOME;
 cd $HOME;
 
 echo 'Copying the report at '$HOME;
-cp *".pdf" "../../reports/";
+#cp *".pdf" "../../reports/";
 
 echo 'Compiling the submission'
 make clean;
