@@ -396,11 +396,13 @@ if [ $psPrivateCount -eq 6 ]; then
 fi
 
 # Print the grades
-fcfsResult='FCFS:[public='$fcfsPublicCount'/'$fcfsPublic', private='$fcfsPrivateCount'/'$fcfsPrivate']'
-srtfResult='SRTF:[public='$srtfPublicCount'/'$srtfPublic', private='$srtfPrivateCount'/'$srtfPrivate']'
-psResult='PS:[public='$psPublicCount'/'$psPublic', private='$psPrivateCount'/'$psPrivate']'
+fcfsResult='FCFS:[public='$fcfsPublicCount','$fcfsPublic', private='$fcfsPrivateCount','$fcfsPrivate']'
+srtfResult='SRTF:[public='$srtfPublicCount','$srtfPublic', private='$srtfPrivateCount','$srtfPrivate']'
+psResult='PS:[public='$psPublicCount','$psPublic', private='$psPrivateCount','$psPrivate']'
 
 echo "$1, $fcfsResult, $srtfResult, Total=$grade, $psResult, TotalBonus=$bonus";
+echo "Printing excel output"
+echo "$1 $fcfsPublic $fcfsPrivate $srtfPublic $srtfPrivate $grade Bonus $psPublic $psPrivate $bonus";
 echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 cd '../';
