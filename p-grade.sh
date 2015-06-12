@@ -400,9 +400,10 @@ fcfsResult='FCFS:[public='$fcfsPublicCount','$fcfsPublic', private='$fcfsPrivate
 srtfResult='SRTF:[public='$srtfPublicCount','$srtfPublic', private='$srtfPrivateCount','$srtfPrivate']'
 psResult='PS:[public='$psPublicCount','$psPublic', private='$psPrivateCount','$psPrivate']'
 
-echo "$1, $fcfsResult, $srtfResult, Total=$grade, $psResult, TotalBonus=$bonus";
+# echo "$1, $fcfsResult, $srtfResult, Total=$grade, $psResult, TotalBonus=$bonus";
 echo "Printing excel output"
-echo "$1 $fcfsPublic $fcfsPrivate $srtfPublic $srtfPrivate $grade Bonus $psPublic $psPrivate $bonus";
+echo "submission_folder fcfsPublicCount fcfsPrivateCount srtfPublicCount srtfPrivateCount Bonus psPublicCount psPrivateCount"
+echo "$1 $fcfsPublicCount $fcfsPrivateCount $srtfPublicCount $srtfPrivateCount Bonus $psPublicCount $psPrivateCount";
 echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 cd '../';
