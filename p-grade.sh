@@ -28,7 +28,11 @@ cp '../'p-tests/*.input p-tests/
 echo 'Copying the report at '$HOME;
 #cp *".pdf" "../../reports/";
 echo 'Copying the code.java at '$HOME;
-#cp code.java '../../codes/'$1'_code.java';
+# cp code.java '../../codes/'$1'_code.java';
+# echo 'Copying the Makefile at '$HOME;
+# cp '../'Makefile '.';
+# echo 'Copying the Scheduler at '$HOME;
+# cp '../'Scheduler.java '.';
 
 echo 'Compiling the submission'
 make clean;
@@ -404,6 +408,7 @@ psResult='PS:[public='$psPublicCount','$psPublic', private='$psPrivateCount','$p
 echo "Printing excel output"
 echo "submission_folder fcfsPublicCount fcfsPrivateCount srtfPublicCount srtfPrivateCount Bonus psPublicCount psPrivateCount"
 echo "$1 $fcfsPublicCount $fcfsPrivateCount $srtfPublicCount $srtfPrivateCount Bonus $psPublicCount $psPrivateCount";
+# echo "$1 BonusPSScheduler $psPublicCount $psPrivateCount";
 echo 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 cd '../';
